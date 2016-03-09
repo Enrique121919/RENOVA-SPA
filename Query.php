@@ -1,0 +1,25 @@
+<?php
+		$id = $_POST['id'];
+		$nombre = $_POST['nombre'];
+		$apellidos = $_POST['apellidos'];
+		$edad = $_POST['edad'];
+		$correo = $_POST['correo'];
+		$habitacion = $_POST['habitacion'];
+		$firma = $_POST['firma'];
+		$fecha = $_POST['fecha'];
+		$boton = $_POST[''];
+
+		$con = mysqli_connect("localhost","root","","renova");
+	if (!$con) {
+    die('No se pudo conectar: ' . mysqli_error($con));
+	}
+	mysqli_select_db($con,"renova");
+				$actualizarnombre  = mysqli_query($con,"UPDATE clientes SET nombre = '".$nombre."' WHERE id = '".$id."' ");
+				$actualizarapellido = mysqli_query($con,"UPDATE clientes SET apellidos = '".$apellidos."' WHERE id = '".$id."' ");
+				$actualizaredad = mysqli_query($con,"UPDATE clientes SET edad = '".$edad."' WHERE id = '".$id."' ");
+				$actualizarcorreo = mysqli_query($con,"UPDATE clientes SET correo = '".$correo."' WHERE id = '".$id."' ");
+				$actualizarhabitacion = mysqli_query($con,"UPDATE clientes SET habitacion = '".$habitacion."' WHERE id = '".$id."' ");
+				$actualizarfirma = mysqli_query($con,"UPDATE clientes SET firma = '".$firma."' WHERE id = '".$id."' ");
+				$actualizarfecha = mysqli_query($con,"UPDATE clientes SET fecha = '".$fecha."' WHERE id = '".$id."' ");
+				header("Location:Crud.php");
+?>
