@@ -10,6 +10,7 @@
 	*
 	*/
 
+	//Declaracion de la clase
 	class ClassPDO
 	{
 		public $connection;
@@ -86,7 +87,7 @@
 			return $this->result;
 		}
 	}
-	
+
 	class Terapeutas{
 		 
 	}
